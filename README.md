@@ -7,6 +7,11 @@ Using another function, the winner of that round is decided. You can then either
 
 No external python dependecy has been used in this game
 
+This Game is build based of the following conditions:
+	1- scissor > paper
+	2- paper > rock
+	3- rock > scissor
+
 How To Play The Game:
 1- First install Python to you OS
 	* Linux: https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-20-04-server
