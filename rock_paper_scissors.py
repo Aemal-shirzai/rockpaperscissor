@@ -1,4 +1,6 @@
 import random
+from word2number import w2n
+
 options = ["rock","paper","scissor"]
 program_win = 0
 user_win = 0
@@ -129,7 +131,7 @@ def play_game():
     global num_of_games
     while True:
         try:
-            num_of_games = int(input("\nPlease Type the number of games You want to play: ",))
+            num_of_games = int( w2n.word_to_num(input("\nPlease Type the number of games You want to play: ",)))
             while turn < num_of_games:
                 make_move()
                 turn +=1
