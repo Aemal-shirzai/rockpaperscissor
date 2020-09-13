@@ -7,28 +7,28 @@ Using another function, the winner of that round is decided. You can then either
 User inputs will be validated using external packages.
 
 Externl Packages:
-	1- word2number: Using This package a word which is equalent to a number will be automatically converted to the maped number. ex: four = 4 [Read More Here](https://pypi.org/project/word2number/)
-	2- pyinputplus: a package to  validate user inputs. [Read more here](https://pypi.org/project/PyInputPlus/)
+	1. word2number: Using This package a word which is equalent to a number will be automatically converted to the maped number. ex: four = 4 [Read More Here](https://pypi.org/project/word2number/)
+	2. pyinputplus: a package to  validate user inputs. [Read more here](https://pypi.org/project/PyInputPlus/)
 	
 
 This Game is build based of the following conditions:
-	1- scissor > paper
-	2- paper > rock
-	3- rock > scissor
+	1. scissor > paper
+	2. paper > rock
+	3. rock > scissor
 
 How To Play The Game:
-1- First install Python to you OS
-	* Linux: https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-20-04-server
-	* Windows: https://www.goodhousekeeping.com/uk/consumer-advice/technology/a30378443/how-to-install-windows-10/
+1. First install Python to you OS
+	* Linux: [How to install](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-20-04-server)
+	* Windows: [How to install](https://www.goodhousekeeping.com/uk/consumer-advice/technology/a30378443/how-to-install-windows-10/)
 
-2-run the project in the terminal using the filename.py
-3-First You will see to type a command 
+2. run the project in the terminal using the filename.py
+3. First You will see to type a command 
 	* Start -> start the game
 	* Exit -> Exit from game
-4- You will be asked to enter the number of games you want to play vs computer
+4. You will be asked to enter the number of games you want to play vs computer
 	* Note: only integer numbers are allowed
-5- Then according to game number you will be asked to pick from rock, scissor and paper
-6- Now with each of your guess programm will also pick on randomly
-7- after loops finishes the excecution then the winner will be announces
-8- at end you will be asked to try again or not
+5. Then according to game number you will be asked to pick from rock, scissor and paper
+6. Now with each of your guess programm will also pick on randomly
+7. after loops finishes the excecution then the winner will be announces
+8. at end you will be asked to try again or not
 
