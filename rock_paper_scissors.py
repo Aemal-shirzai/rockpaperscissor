@@ -1,5 +1,6 @@
 import random
 from word2number import w2n
+import pyinputplus as pyip
 
 options = ["rock","paper","scissor"]
 program_win = 0
@@ -15,47 +16,20 @@ def terminal_commands():
     '''Show user which command to type.'''
     print(''' 
 Welcome To Rock, Paper and Scissor Game.
-    Type Help To Get Full Information
-    ''')
-    while True:
-        user_input = input(">> ").lower()
-        if user_input == "start":
-            play_game()
-        elif user_input == "exit":
-            break
-        else:
-            print('''
-------------------------------------------------------------------------------------------------------------------
-Help    ---->       To Get Availible Commands
-Start   ---->       To Start The Game
-exit    ---->       To Exit  Game Terminal   
+Type Help To Get Full Information
 ''')
 
+    user_input = pyip.inputMenu(["start","exit"] ,numbered=True).lower()
+    if user_input == "start":
+        play_game()
+    elif user_input == "exit":
+        return False
 
 def make_move():
     ''' This function is resposible to take user input for rock, paper or scissor and return user input '''
-    while True:
-        u_move = input("what is in your mind? (rock, paper or scissor) : ")
-        u_move = u_move.lower()
-        if not move_validaty(u_move):
-            print ('''
-                You can only choose between:
-                Rock        Or      (r)
-                Paper       Or      (p)
-                Scissor     Or      (s)
-            ''')
-        else:
-            break
+    u_move = pyip.inputMenu(["rock","paper","scissor"],numbered=True).lower()
+    u_move = u_move.lower()
     return collect_result(u_move)
-
-def move_validaty(move):
-    ''' This function is resposible to check if the user input for rock, scissor and paper is valid or not and return True or False. '''
-    found = False
-    for full_name in options:
-        if move == full_name:
-            found =  True
-    return found
-
 
 def collect_result(u_move):
     '''This function check the user input with the computer predictions and calculate the win numbers'''
@@ -101,29 +75,20 @@ def check_winner(u_win,p_win):
 
 def try_again():
     '''Play The game after it has been finished'''
-    while True:
-        again = input("Play Again? (Yes/Y)or(No/N): ").lower()
-        if again == "y" or again == "yes":
-            global program_win 
-            global user_win 
-            global both_equal 
-            global turn 
-            global result
-            program_win , user_win, turn , both_equal = 0,0,0,0
-            result = ""
-            play_game()
-            break
-        elif again == "n" or again == "no":
-            terminal_commands()
-            break
-        else: 
-            print('''
-------------------------------------------------------------------------------------------------------------------
-Yes(Y)  ---->       Play Again
-No(N)   ---->       Return to Terminal
- 
-            ''')
-
+    again = pyip.inputYesNo("Play Again ? ").lower()
+    if again == "y" or again == "yes":
+        global program_win 
+        global user_win 
+        global both_equal 
+        global turn 
+        global result
+        program_win , user_win, turn , both_equal = 0,0,0,0
+        result = ""
+        play_game()
+        return False
+    elif again == "n" or again == "no":
+        terminal_commands()
+        return False
 
 def play_game():
     '''Play the game and if game is finished then call try again mehtod and it prints the final result.'''
