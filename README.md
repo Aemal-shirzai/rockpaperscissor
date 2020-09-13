@@ -7,8 +7,8 @@ Using another function, the winner of that round is decided. You can then either
 User inputs will be validated using external packages.
 
 Externl Packages:
-	* word2number: Using This package a word which is equalent to a number will be automatically converted to the maped number. ex: four = 4 (Read More Here)[https://pypi.org/project/word2number/
-	*pyinputplus: a package to  validate user inputs https://pypi.org/project/PyInputPlus/]
+	1- word2number: Using This package a word which is equalent to a number will be automatically converted to the maped number. ex: four = 4 [Read More Here](https://pypi.org/project/word2number/)
+	2- pyinputplus: a package to  validate user inputs. [Read more here](https://pypi.org/project/PyInputPlus/)
 	
 
 This Game is build based of the following conditions:
